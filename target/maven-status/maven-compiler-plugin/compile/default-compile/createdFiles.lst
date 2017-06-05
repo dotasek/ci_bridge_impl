@@ -1,0 +1,4 @@
+org/cytoscape/ci_bridge_impl/CIWrapper.class
+org/cytoscape/ci_bridge_impl/internal/CIErrorFactoryImpl.class
+org/cytoscape/ci_bridge_impl/CIProvider.class
+org/cytoscape/ci_bridge_impl/internal/CIExceptionFactoryImpl.class

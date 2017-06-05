@@ -1,0 +1,27 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1496690968107
+Build-Jdk: 1.8.0_111
+Built-By: davidotasek
+Bundle-ClassPath: .,ci-api-3.6.0-SNAPSHOT.jar
+Bundle-Description: This is a TEMPORARY, COMPILE ONLY bundle intended to
+  support CyREST before Cytoscape makes certain API changes. Any project
+ s that use this for compilation should ONLY use it for Cytoscape API 3.
+ 5.x
+Bundle-ManifestVersion: 2
+Bundle-Name: ci-bridge-impl
+Bundle-SymbolicName: org.cytoscape-ci.bridge-impl
+Bundle-Version: 0.0.1.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Embed-Dependency: ci-api
+Embed-Transitive: true
+Embedded-Artifacts: ci-api-3.6.0-SNAPSHOT.jar;g="org.cytoscape";a="ci-ap
+ i";v="3.6.0-SNAPSHOT"
+Export-Package: org.cytoscape.ci;uses:="javax.ws.rs,org.cytoscape.ci.mod
+ el";version="0.0.1.SNAPSHOT",org.cytoscape.ci.model;version="0.0.1.SNAP
+ SHOT",org.cytoscape.ci_bridge_impl;uses:="org.cytoscape.ci,org.cytoscap
+ e.ci.model,org.osgi.framework";version="0.0.1.SNAPSHOT"
+Import-Package: org.cytoscape.ci,org.cytoscape.ci.model,javax.ws.rs;vers
+ ion="[2.0,3)",org.osgi.framework;version="[1.5,2)",org.osgi.service.cm;
+ version="[1.3,2)"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-3.2.0.201605172007
