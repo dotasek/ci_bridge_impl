@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1496690968107
+Bnd-LastModified: 1496773040264
 Build-Jdk: 1.8.0_111
 Built-By: davidotasek
 Bundle-ClassPath: .,ci-api-3.6.0-SNAPSHOT.jar
