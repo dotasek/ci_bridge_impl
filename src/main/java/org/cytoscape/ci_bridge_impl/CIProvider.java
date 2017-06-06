@@ -7,24 +7,25 @@ import java.util.ArrayList;
 import java.util.Dictionary;
 import java.util.List;
 
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+
 import org.cytoscape.ci.CIErrorFactory;
 import org.cytoscape.ci.CIExceptionFactory;
+import org.cytoscape.ci.CIResponseFactory;
 import org.cytoscape.ci.model.CIError;
 import org.cytoscape.ci.model.CIResponse;
 import org.cytoscape.ci_bridge_impl.internal.CIErrorFactoryImpl;
 import org.cytoscape.ci_bridge_impl.internal.CIExceptionFactoryImpl;
+import org.cytoscape.ci_bridge_impl.internal.CIResponseFactoryImpl;
 import org.osgi.framework.BundleContext;
 import org.osgi.service.cm.Configuration;
 import org.osgi.service.cm.ConfigurationAdmin;
 
 public class CIProvider {
 	
-	public static <K> CIResponse<K> getWrappedResponse(K data) {
-		CIResponse<K> ciResponse = new CIResponse<K>();
-		List<CIError> errorList = new ArrayList<CIError>();
-		ciResponse.data = data;
-		ciResponse.errors = errorList;
-		return ciResponse;
+	public static CIResponseFactory getCIResponseFactory() {
+		return new CIResponseFactoryImpl();
 	}
 	
 	public static CIErrorFactory getCIErrorFactory(BundleContext bc) throws IOException {
